@@ -25,4 +25,5 @@ public class FoodCategory extends BaseEntity {
 
 //    @OneToMany(mappedBy = "foodcategory", cascade = CascadeType.ALL)
 //    private List<MemberPrefer> MemberPreferList = new ArrayList<>();
+//    hi
 }
