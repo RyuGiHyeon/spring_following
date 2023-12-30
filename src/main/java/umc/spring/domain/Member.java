@@ -6,8 +6,8 @@ import org.hibernate.annotations.DynamicInsert;
 import org.hibernate.annotations.DynamicUpdate;
 import umc.spring.domain.common.BaseEntity;
 import umc.spring.domain.enums.Gender;
-import umc.spring.domain.enums.MemberStatus;
 import umc.spring.domain.enums.SocialType;
+import umc.spring.domain.enums.MemberStatus;
 import umc.spring.domain.mapping.MemberAgree;
 import umc.spring.domain.mapping.MemberMission;
 import umc.spring.domain.mapping.MemberPrefer;
@@ -37,7 +37,7 @@ public class Member extends BaseEntity {
     private String address;
 
     @Column(nullable = false, length = 40)
-    private String specAdderss;
+    private String specAddress;
 
     @Enumerated(EnumType.STRING)
     @Column(columnDefinition = "VARCHAR(10)")
@@ -52,7 +52,7 @@ public class Member extends BaseEntity {
 
     private LocalDate inactiveDate;
 
-//    @Column(nullable = false, length = 50)
+    //    @Column(nullable = false, length = 50)
     private String email;
 
     @ColumnDefault("0")
@@ -68,5 +68,5 @@ public class Member extends BaseEntity {
     private List<Review> reviewList = new ArrayList<>();
 
     @OneToMany(mappedBy = "member", cascade = CascadeType.ALL)
-    private List<MemberMission> memberMissionsList = new ArrayList<>();
+    private List<MemberMission> memberMissionList = new ArrayList<>();
 }

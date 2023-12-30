@@ -20,4 +20,3 @@ public class FoodCategoryExistService {
         return categoryIds.stream().allMatch(foodCategoryRepository::existsById);
     }
 }
-
